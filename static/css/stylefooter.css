@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@1,8..144,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap');
+
+
+
+footer{
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    background: #111;
+    /* height: auto; */
+    /* width: 100vw; */
+
+    /* padding-top: 40px; */
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    /* max-width: 500px; */
+    /* margin: 10px auto; */
+    /* line-height: 28px; */
+    /* font-size: 14px; */
+    color: #cacdd2;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+
+    border-radius: 50%;
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+
+
+    transition: color .4s ease;
+
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom{
+    background: #000;
+    /* width: 100vw; */
+    padding: 20px;
+    /* padding-bottom: 70px; */
+    text-align: center;
+}
+.footer-bottom p{
+float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom p a{
+  color:#44bae8;
+  font-size: 16px;
+  text-decoration: none;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+/* header{
+	font-family: Helvetica;
+	width: 480px;
+	margin: 0 auto;
+} */
+/* ul{
+	list-style: none;
+} */
+
+.des #menu li>a{
+	background-color: grey;
+	color: white; 
+	/* padding: 5px;  */
+	display: block;
+	text-decoration: none; 
+	/* min-width: 100px;  */
+}
+
+/* #menu li>a:hover{
+	color: #000;
+	background-color: #eaeaea;
+} */
+#menu>li{
+	float: left;
+	text-align:center
+}
+ #menu>li>ul{
+	display: none;
+	text-decoration: none;
+}
+#menu>li:hover>ul {
+	display:block;
+	text-decoration: none;
+}

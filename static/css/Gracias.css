@@ -1,0 +1,412 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+html{
+	scroll-behavior: smooth;
+	font-family: Roboto,sans-serif ;
+}
+
+h1{font-size: 3.5em;
+}
+h2{font-size: 2.7em;
+}
+h3{font-size: 2em;
+}
+p{font-size: 1.25em;
+}
+
+ul{list-style: none;
+}
+li{font-size: 1.25em;
+}
+
+button{
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 10px  rgba(0, 0, 0, 0.5);
+	color:  white;
+	background-color: blueviolet;
+}
+
+button:hover{
+	background-color: rgb(101,33,165);
+
+}
+
+.contenido{
+	max-width: 1600px;
+	margin: auto;
+
+}
+
+.color-acento{
+	color: blueviolet;
+}
+
+header{
+	background-color: rgb(245,245,245);
+    position: fixed;
+}
+header .logo{
+	margin: 0;
+	padding: 0 30px;
+	font-weight: bold;
+	color: blueviolet;
+	font-size: 1.6em;
+}
+
+header .redes{
+	display: flex;
+	justify-content: flex-end;
+
+
+
+}
+header .contenido{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+header nav{
+	display:  flex;
+	flex-direction: column;
+	text-align: center;
+	padding-bottom: 25px;
+	
+}
+.logo a {
+	padding: 5px 12px;
+	text-decoration: none;
+	font-weight: bold;
+}
+.log a:hover {
+	color: blueviolet;
+}
+nav a{
+	padding: 5px 12px;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+
+nav a:hover{
+	color: blueviolet;
+}
+.img-banner{
+width: 100%;
+float: left;
+position: relative;
+}
+
+.carro {
+    width: 25px;
+    height: 25px;
+    float: right;
+    }
+
+#hero{
+	background-image:url(../img/collar2.jpg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	height: 60vh;
+	
+	background-image: linear-gradient(0deg, rgba(0, 0, 0,0.5)),rgb(0,0,0,0.5);
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero-img{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	height: auto;
+	
+	background-image: linear-gradient(0deg, rgba(0, 0, 0,0.5)),rgb(0,0,0,0.5);
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+    #owl-demo .owl-item div{
+      padding:5px;
+    }
+    #owl-demo .owl-item img{
+      display: block;
+      width: 100%;
+      height: auto;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+
+
+
+#hero h1{
+	color: #000;
+}
+#hero button{
+	font-size: 1.75em;
+}
+
+#somos-kairos .contenido{
+	text-align: center;
+	padding: 10px 12px;
+		background-image:url(../img/bc.jpg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	height: 60vh;
+	
+	background-image: linear-gradient(0deg, rgba(0, 0, 0,0.5)),rgb(0,0,0,0.5);
+    background-size: cover;
+    background-position: center center;
+
+
+
+}
+#nuestros-valores{
+	background-color: #e8e8e4;
+     color: #000;
+	text-align: center;
+	
+}
+
+#nuestros-valores .contenido{
+	padding: 80px 12px;
+}
+#nuestros-productos h2{
+	margin-top: 0;
+}
+#nuestros-valores p{
+	display: none;
+	color: #fff;
+}
+#nuestros-valores .carta1{
+	background-position: center center;
+	background-size: cover;
+	padding: 50px;
+	margin: 30px;
+	border-radius: 15px;
+}
+#nuestros-valores .carta2{
+	background-position: center center;
+	background-size: cover;
+	padding: 50px;
+	margin: 30px;
+	border-radius: 15px;
+}
+
+#nuestros-valores .carta3{
+	background-position: center center;
+	background-size: cover;
+	padding: 50px;
+	margin: 30px;
+	border-radius: 15px;
+}
+
+.carta1{
+	background-image:url(../img/collar3.jpg);
+	
+}
+
+
+.carta2{
+	background-image:url(../img/collar1.jpg);
+}
+
+.carta3{
+	background-image:url(../img/collar5.jpg);
+
+}
+#Registrate .contenido{
+	display: center;
+
+	text-align: center;
+	padding: 20px 12px;
+	color: #000
+}
+
+#final{
+	display: center;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: center;
+	height: 20vh;
+	color: #000;
+	background-color: #e8e8e4;
+}
+
+
+#final h2{
+	font-size: 9vw;
+
+}
+
+#final button{
+	font-size: 2vw;
+
+}
+
+footer{
+	background-color: rgb(230,230,230);
+}
+footer p{
+	margin: 0;
+	color: rgb(100,100,100);
+}
+
+footer .contenido{
+	height: 100px;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+@media (min-width:720px){
+
+	header{
+		position: fixed;
+		width: 100%;
+	}
+	header .contenido{
+		flex-direction: row;
+	}
+
+	header nav{
+		flex-direction: row;
+		padding-bottom: 0;
+		padding-right: 20px;
+	}
+
+	#hero h1{
+		font-size: 5em;
+	}
+
+
+	#somos-kairos .texto{
+		width: 50%;
+		max-width: 600px;
+		text-align: initial;
+		padding-left: 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+
+	#somos-kairos h2{
+		margin-top: 0px;
+
+	}
+
+
+	#somos-kairos .contenido{
+		display: flex;
+		justify-content: center;
+
+		height: 30em;
+		width: 100% ;
+
+	}
+	#nuestros-valores .valores{
+		display: flex;
+		justify-content: center;
+	}
+	#nuestros-valores p{
+		display: block;
+		margin-bottom: 30px;
+
+	}
+
+	#nuestros-valores h3{
+		height: 3.5em;
+		margin-top: 0;
+	}
+
+	#nuestros-valores .carta1{
+		padding: 50px;
+		background-size: 100% 160px;
+		background-repeat: no-repeat;
+		background-position-y:0;
+		background-color: rgb(50,50,50);
+		box-shadow: 10px 2px 5px rgba(0,0,0,0.5);
+
+	}
+
+	#nuestros-valores .carta2{
+		padding: 60px;
+		background-size: 100% 160px;
+		background-repeat: no-repeat;
+		background-position-y:0;
+		background-color: rgb(50,50,50);
+		box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+	}
+
+	#nuestros-valores .carta3{
+		padding: 50px;
+		background-size: 100% 150px;
+		background-repeat: no-repeat;
+		background-position-y:0;
+		background-color: rgb(50,50,50);
+		box-shadow: 10px 2px 5px rgba(0,0,0,0.5);
+	}
+
+	#Registrate{
+		background-repeat: no-repeat;
+		background-size: 200px 300px;
+		background-position: calc(100vw - 500px) 130px;
+
+	}
+	#Registrate .contenido{
+		text-align: center;
+		justify-content: center;
+	}
+
+	#Registrate ul{
+		margin-left: 100px;
+
+	}
+	@media (min-width:720px){
+	#final h2{
+		font-size: 5em;
+
+	}
+
+	#final button{
+		font-size: 2em;
+
+	}
+
+	footer .contenido{
+		justify-content:flex-start;
+
+	}
+
+	}
+ 
+@media(min-width: 1100px){
+		#Registrate{
+			background-position-x: calc(100vw - 800vw);
+		}
+}
+}

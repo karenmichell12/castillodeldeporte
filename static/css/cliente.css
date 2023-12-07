@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+.carrito{
+    width: 15%;
+   
+}
+body{
+    background-image: url(../img/rose.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bgNav {
+    background-color: #9d4edd ;
+}
+ .actor {
+    text-align: center;
+    font-size: 1.3vw;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+     color:black;
+ }
+ .bgNav img{
+    width: 70%;
+    height: 12%;
+    padding-top: 15px;
+ }
+.bgNav ul{
+    display: inline;
+ }
+ ul li{
+    list-style: none;
+   
+ }
+.bgNav ul li a{
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 5px 3px 5px;
+    display: block;
+    font-size: 1.3vw;
+ }
+.bgNav ul li a:hover{
+color: #fff;
+font-weight: bold;
+border-left: 5px solid violet;
+font-size: 1.3vw;
+
+ }
+.bgNav h4{
+    color: #fff;
+     text-align: center;
+     padding: 10px 0;
+     margin: 0;
+     font-size: 1.3vw;
+ }
+
+ .aligC{
+     text-align: center;
+     font-family: 'Roboto', sans-serif;
+     font-size: 1.3vw;
+     color: black;
+ }
+ .botons a {
+   background: #5c032c;
+   padding: 12px;
+   color: white;
+   margin: 16px 0;
+   font-size: 16px;
+   text-decoration: none;
+}
+h5{
+     color: #fff;
+     text-align: center;
+     padding: 5px 0;
+     margin: 0;
+     font-size: 1.3vw;
+
+}
