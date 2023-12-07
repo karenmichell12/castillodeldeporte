@@ -1,0 +1,174 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-sacle=1.0">
+	<link rel="stylesheet" href="{% static 'css/stylenav.css' %}">
+	<link rel="stylesheet" href="{% static 'css/stylefooter.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styleLogin.css' %}">
+	<link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+	<link rel="stylesheet" href="{% static 'css/normal.css' %}">
+	<link rel="stylesheet" href="{% static 'css/skele.css' %}">
+	<link rel="stylesheet" href="{% static 'css/custo.css' %}">
+	<title>Practica::2</title>
+</head>
+<body>
+
+	<!-- barra del encabezado: logo(empresa) -->
+	<header >
+		<nav class="nav">
+			<a class="logo"><img src="{% static 'images/LOGO_CASTILLO.png' %}"></a>
+			<ul class="nav nav-menu nav-menu-visible" id="menu">
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link" href="#" id="home">Inicio</a>
+				</li>
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link" href="{% url 'products' %}" id="sistem">Productos</a>
+					<ul>
+						<li class="nav-link nav-menu-link des"><a href="{% url 'categoryM' %}">Futbol</a></li>
+						<li class="nav-link nav-menu-link des"><a href="{% url 'categoryC' %}">Baloncesto</a></li>
+					</ul>
+				</li>
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link" href="#quienesomos" id="about">Quienes somos</a>
+				</li>
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link nav-menu-link_active" href="{% url 'login' %}" id="contact">Iniciar
+						Sesion</a>
+				</li>
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link nav-menu-link_active" href="{% url 'login' %}"
+						id="contact">Registrar</a>
+				</li>
+				<li class="submenu nav-menu-item"><a class="fa-solid fa-cart-shopping">
+						<div id="carrito" >
+							<table id="lista-carrito" class="u-full-width ">
+								<thead>
+									<tr>
+										<th>Imagen</th>
+										<th>Nombre</th>
+										<th>Precio</th>
+										<th>Cantidad</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+
+							<a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+						</div>
+				</li></a>
+			</ul>
+		</nav>
+	</header>
+
+
+
+	<section class="detalle">
+		<h1 class="letra">
+			El Castillo del Deporte
+		</h1>
+		<h4>
+			<small>
+				Almacen de deportes
+			</small>
+		</h4>
+	</section>
+
+	<div class="slider">
+		<ul>
+			<li><img src="{% static 'images/box.jpg' %}" alt=""></li>
+			<li><img src="{% static 'images/soccer-1678992_1920.jpg' %}" alt=""></li>
+			<li><img src="{% static 'images/running-track-1201014_1920.jpg' %}" alt=""></li>
+			<li><img src="{% static 'images/basketball-95607_1920.jpg' %}" alt=""></li>
+		</ul>
+	</div>
+
+
+	<main>
+		<div id="lista-cursos" class="container">
+			<h1 id="encabezado" class="encabezado">Productos Baloncesto</h1>
+			<div class="row">
+				<div class="four columns">
+					<div class="card">
+						<img src="{% static 'images/baloncesto.png' %}" class="imagen-curso u-full-width">
+						<div class="info-card">
+							<h4>BALONCESTO GOLTY PLAYMAKER</h4>
+							<p>Resistente,Durabilidad,Menor absorción de humedad,Durabilidad,Óptimo balanceo,Mejor
+								desempeño,Balón controlado con mayor precisión en el lanzamiento,Extraordinario
+								agarre,Mayor dominio del balón,Resistente al desgaste,Cumple especificaciones oficiales
+								de tamaño, peso y rebote</p>
+							<img src="{% static 'images/estrellas.png' %}">
+							<p class="precio">$200 <span class="u-pull-right ">$150</span></p>
+							<a href="#" class="u-full-width button-primary button input agregar-carrito"
+								data-id="1">Agregar Al Carrito</a>
+						</div>
+					</div>
+					<!--.card-->
+				</div>
+				<div class="four columns">
+					<div class="card">
+						<img src="{% static 'images/baloncesto2.png' %}" class="imagen-curso u-full-width">
+						<div class="info-card">
+							<h4>BALONCESTO COMPETITION</h4>
+							<p>Extraordinario agarre,Mayor dominio del balón,Resistente al desgaste,Alta duración,Cumple
+								especificaciones oficiales de tamaño, peso, rebote.</p>
+							<img src="{% static 'images/estrellas.png' %}">
+							<p class="precio">$200 <span class="u-pull-right ">$180</span></p>
+							<a href="#" class="u-full-width button-primary button input agregar-carrito"
+								data-id="2">Agregar Al Carrito</a>
+						</div>
+					</div>
+				</div>
+				<div class="four columns">
+					<div class="card">
+						<img src="{% static 'images/basquet2.jpg' %}" class="imagen-curso u-full-width">
+						<div class="info-card">
+							<h4>BALONCESTO GOLTY</h4>
+							<p>Marca: Golty, Modelo: T671455_3, Tipo: Balones de basquetball, Tamaño: 3, Material principal: Nylon, Costura: Sin costura, Cámara: Aire, Disciplina: Básquetbol, Hecho en Colombia</p>
+							<img src="{% static 'images/estrellas.png' %}">
+							<p class="precio">$85 <span class="u-pull-right ">$75</span></p>
+							<a href="#" class="u-full-width button-primary button input agregar-carrito"
+								data-id="3">Agregar Al Carrito</a>
+						</div>
+					</div>
+					<!--.card-->
+				</div>
+
+			</div>
+			<!--.row-->
+		</div>
+	</main>
+
+	<footer>
+		<div class="footer-content">
+			<h2>Desarrollado por:</h2><br>
+			<p>Sena Centro de Servicios Financieros </p>
+			<p>Programa Técnico de Desarrollo de Software</p>
+			<p>Coordinación Acádemica de Técnologia e Informática</p>
+			<p>2022</p>
+			<ul class="socials">
+				<li><a href="https://www.facebook.com/El-Castillo-Del-Deportes-1109242705876897/"><i
+							class="fa fa-facebook"></i></a></li>
+				<li><a href="https://instagram.com/castillo_del_deporte_?igshid=YmMyMTA2M2Y="><i
+							class="fa fa-instagram"></i></a></li>
+				<li><a href="https://api.whatsapp.com/send?phone=573219485468"><i class="fa fa-whatsapp"></i></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>copyright &copy;2022</p>
+		</div>
+
+	</footer>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+	<script src="{% static 'js/main (2).js' %}"></script>
+	<script src="{% static 'js/login.js' %}"></script>
+	<script src="{% static 'js/app.js' %}"></script>
+	
+</body>
+</html>

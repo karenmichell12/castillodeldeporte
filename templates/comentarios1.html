@@ -1,0 +1,57 @@
+{% load humanize %}
+{% for c in object_list %}
+{% if request.user == c.user%}
+<div class="card mb-2">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-4">
+                <div class="text-uppercase">
+                    Comentario realizado
+                </div>
+                <div class="">
+                    {{ c.Date }}
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="text-uppercase">
+                    Usuario
+                </div>
+                <div class="">
+                    {{ c.user }}
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="text-uppercase">
+                    Opciones
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+          <div class="row">
+            <div class="col-4">
+                <div class="mt-2">
+                    {{c.Imagen}}
+                </div>
+                <div class="">
+                    {{ c.Producto }}
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="">
+                    {{c.Calification}}
+                </div>
+                <div class="text-danger">
+                    {{c.Comentary}}
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="">
+                    <a href="{% url 'deletec' c.pk %}" class="btn btn-danger">Eliminar comentario</a>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
+{%endif%}
+{%endfor%}

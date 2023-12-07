@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+		{% load humanize %}
+		{% csrf_token %}
+		<div class="row">
+        <div class="col-3">
+            {%if products.Image%}
+             <img src="{{products.Image.url}}" alt="Imagen del producto" width="200" height="200">
+            {%endif%}
+        </div>
+		<div class="col">
+			<div class="h3 font-weight-bold text-success">
+				Producto agregado al carrito de compras
+			</div>
+	
+		   <div class="">
+			{{products.name}}
+		   </div>
+		  <div class="font-weight-bold text-danger">
+			${{products.price | intcomma}}
+		  </div>
+		  <a href="{% url 'catalogo'%}"><button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>  Sigue tu compra</button></a>
+		  <a href="{% url 'tienda'%}"><button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i>  Ir al carrito</button></a>
+	    </div>
+		</div>
+{%endblock%}

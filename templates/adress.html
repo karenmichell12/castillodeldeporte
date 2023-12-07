@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+            <div class="h3 mt-5 aligC justify-content-center">
+                <i class="fa-solid fa-house"></i>Mis direcciones:
+                </div>
+                <a href="{% url 'agregard'%}"><button class="btn btn-primary">Agregar nueva direccion</button></a>
+                <div class="mt-2">
+                    {% for direccion in object_list%}
+                    <div class="mt-2">
+                     {% include 'tableadress.html' with edit=True %}
+                    </div>
+                    {%endfor%}
+                </div>
+{% endblock %}

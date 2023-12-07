@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-sacle=1.0">
+	<link rel="stylesheet" href="{% static 'css/stylenav.css' %}">
+	<link rel="stylesheet" href="{% static 'css/cliente_s.css' %}">
+	<link rel="stylesheet" href="{% static 'css/productos1.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/stylefooter.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styleLogin.css' %}">
+	<link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+	<link rel= "stylesheet" href="{% static 'css/inventario.css' %}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+	<link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<title>El castillo del deporte</title>
+</head>
+
+<body>
+	<!-- barra del encabezado: logo(empresa) -->
+	<header>
+		<nav class="nav">
+			<a class="logo"><img src="{% static 'img/LOGO_CASTILLO.png' %}"></a>
+			<ul class="nav nav-menu nav-menu-visible" id="menu">
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link" href="{% url 'index' %}" id="home">Inicio</a>
+				</li>
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link" href="{% url 'productos' %}" id="sistem">Productos</a>
+				</li>
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link" href="#quienesomos" id="about">Quienes somos</a>
+				</li>
+				{% if user.is_authenticated %}
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link nav-menu-link_active" href="{% url 'logout' %}"
+						id="contact">Salir</a>
+				</li>
+				{% else %}
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link nav-menu-link_active" href="{% url 'join' %}" id="contact">Iniciar
+						Sesion</a>
+				</li>
+				<li class="nav-menu-item">
+					<a class="nav-link nav-menu-link nav-menu-link_active" href="{% url 'registro' %}"
+						id="contact">Registrar</a>
+				</li>
+				{% endif %}
+				<li class="submenu nav-menu-item {% if request.path == cart%}active{% endif %} ">
+					<a href="{% url 'join' %}" class="fa-solid fa-cart-shopping"></a>
+
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="row">
+       
+        <div class="col-2 bgNav">
+            <div class="actor">
+            <img src="{% static 'img/17004.png' %}">
+            <h4>CLIENTE</h4>
+            <h5>{{user.username}}</h5>
+            </div>
+            <h4>Usuario</h4>
+            <ul>
+                <li><a href="{% url 'verperfil' %}"><i class="fa-solid fa-user"></i> Ver perfil</a></li>
+				<li><a href="{% url 'direccion' %}"><i class="fa-solid fa-house"></i> Ver mis direcciones</a></li>
+            </ul>
+            <h4>Pedidos</h4>
+            <ul>
+                <li><a href="{% url 'catalogo'%}"><i class="fa-brands fa-product-hunt"></i>Mirar productos</a></li>
+                <li ><a href="{% url 'tienda'%}"><i class="fa-brands fa-product-hunt"></i> Mirar carrito</a></li>
+                <li><a href="{% url 'pedido' %}"><i class="fa-brands fa-product-hunt"></i> Consultar pedidos</a></li>
+            </ul>
+            <h4>Calificaciones</h4>
+            <ul>
+                <li > <a href="{% url 'comentarios' %}"><i class="fa-solid fa-star"></i>Hacer comentario</a></li>
+                <li  ><a href="{% url 'comentario' %}"><i class="fa-solid fa-star"></i>Consultar Calificaciones</a></li>
+            </ul>
+            <ul>
+                <li><a href="{% url 'logout'%}"><button class="btn btn-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesion</button></a></li>
+            </ul>
+ 
+        </div>
+        <div class="col-10">
+            {% block content %}
+            {% endblock %}
+        </div>

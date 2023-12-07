@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Contactanos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilosform.css' %}">
+
+</head>
+
+<body>
+
+    <form class=" form-iniciosesion" method="post">
+        {% csrf_token %}
+        <div class="contenedor">
+
+            <h1>Formulario Contacto</h1>
+    
+            <div class="contenido">
+    
+                <div class="info">
+    
+                    <div class="col">
+                        <i class="icono fas fa-map-marker-alt"></i>
+                        <p>7 de Agosto <br> Carrera 24 #63-63</p>
+                    </div>
+    
+                    <div class="col">
+                        <i class="icono fas fa-envelope"></i>
+                        <p>elcastillodeportes@hotmail.com</p>
+                    </div>
+    
+                    <div class="col">
+                        <i class="icono fas fa-phone"></i>
+                        <p>(01) 6262-222 <br> 3219485468</p>
+                    </div>
+    
+                    <div class="redes-s">
+    
+                        <a href="https://www.facebook.com/El-Castillo-Del-Deportes-1109242705876897/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/castillo_del_deporte_?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="formulario">
+                    <div class="form-group" id="user-group">
+                        <input id="name" name="name" type="text" placeholder="Nombre" class="controls" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="col">
+                            <input id="lname" name="lname" type="text" placeholder="Apellido" class="controls" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col">
+                            <input id="subject" name="subject" type="text" placeholder="Asunto" class="controls" required>
+                        </div>
+                    </div>
+                    <div class="form-group" id="user-group">
+                        <input type="email" class="form-control controls" required placeholder="Correo electrónico" name="email" />
+                    </div>
+                    <textarea class="controls" cols="50" rows="5" id="message" name="message"
+                        placeholder="Escribe tu comentario"></textarea>
+                    <button type="submit" class="botons"><i class="fas fa-sign-in-alt"></i> Enviar </button>
+                    <button type="reset" class="botons">Cancelar</button>
+                    <a href="{% url 'index' %}"> <button type="button" class="botons"> Inicio </button></a>
+                    </div>
+                
+                </div>
+    
+            </div>
+    
+        </div>
+        
+        
+        </div>
+    </form>
+    </div>
+    </div>
+
+   
+</body>
+
+</html>

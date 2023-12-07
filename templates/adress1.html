@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="col">
+    {% if direccion%}
+    <div class="h3">
+        Recoge el pedido en la direccion
+    </div>
+    <div class="">
+      {% include 'tableadress.html'%}
+    </div>
+    {% if can_choose_direccion %}
+    <div class="mt-2">
+      <a href="{% url 'Select' %}" class="btn btn-primary">Otra direccion</a>
+    </div>
+    {%endif%}
+    <div class="mt-2">
+    <a href="{% url 'Confirmar' %}" class="btn btn-warning">Entregar a esta direccion</a>
+    </div>
+
+
+    {%else%}
+    <div class="h3">
+        Registra al menos una direccion
+    </div>
+    <div class="">
+      {% url 'direccionpedido' as next_url %}
+        <a href="{% url 'agregard'%}?next={{ next_url }}"><button class="btn btn-primary"> Inserta nueva direccion</button></a>
+    </div>
+    {%endif%}
+  </div>
+{% endblock %}
